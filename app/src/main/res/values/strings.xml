@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Фитнесс Шеф</string>
+
+    <string name="dummy_button">Сменить котика</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="main_header">Fintess Chef</string>
+</resources>

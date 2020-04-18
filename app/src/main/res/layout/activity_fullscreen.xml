@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".FullscreenActivity" android:background="@color/colorPrimary">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp" android:id="@+id/main_header" android:layout_gravity="top"
+                android:background="@color/colorPrimaryDark">
+            <TextView
+                    android:text="@string/main_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/AppTitle" android:layout_weight="1"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem" android:textSize="24sp"
+                    android:textStyle="bold" android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="234dp">
+
+            <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_gravity="center">
+
+                <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <Button
+                            android:text="Пн"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Mn"
+                    />
+                    <Button
+                            android:text="Вт"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Tu"/>
+                    <Button
+                            android:text="Ср"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Wd"/>
+                    <Button
+                            android:text="Чт"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Th"/>
+                    <Button
+                            android:text="Пт"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Fr"/>
+                    <Button
+                            android:text="Сб"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Sa"/>
+                    <Button
+                            android:text="Вс"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" android:id="@+id/Btn.Sun"/>
+                </TableRow>
+            </TableLayout>
+        </FrameLayout>
+        <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/Web.ElementCat"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/fullscreen_content_controls"
+                  style="?metaButtonBarStyle"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_horizontal"
+                  android:background="@color/colorPrimaryDark"
+                  android:orientation="horizontal"
+                  tools:ignore="UselessParent">
+
+        <Button android:id="@+id/catBtn"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button"/>
+
+    </LinearLayout>
+
+</FrameLayout>
